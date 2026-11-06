@@ -1,0 +1,81 @@
+[
+  { "name": "Amanda-Clearcreek Local", "counties": ["Fairfield"] },
+  { "name": "Berne Union Local", "counties": ["Fairfield"] },
+  {
+    "name": "Bexley City", "counties": ["Franklin"],
+    "levy": {
+      "date": "November 3, 2026", "status": "Unofficial", "result": "Did not pass",
+      "issue": "Issue 5 · facilities package: 0.5% continuing income tax plus a 2.05-mill bond",
+      "amount": "About $115 million", "vote": "About 46% for",
+      "source": "Unofficial results reported Nov. 4, 2026 (AP via NBC4). Official totals are certified by the county board of elections."
+    }
+  },
+  { "name": "Big Walnut Local", "counties": ["Delaware"] },
+  { "name": "Bloom-Carroll Local", "counties": ["Fairfield"] },
+  { "name": "Buckeye Valley Local", "counties": ["Delaware"] },
+  { "name": "Canal Winchester Local", "counties": ["Franklin", "Fairfield"] },
+  { "name": "Cardington-Lincoln Local", "counties": ["Morrow"] },
+  { "name": "Columbus City", "counties": ["Franklin"] },
+  { "name": "Delaware City", "counties": ["Delaware"] },
+  { "name": "Dublin City", "counties": ["Franklin", "Delaware", "Union"] },
+  {
+    "name": "Elgin Local", "counties": ["Marion"],
+    "levy": {
+      "date": "November 3, 2026", "status": "Result pending", "result": "Result not yet confirmed",
+      "issue": "2.88-mill renewal levy", "amount": "Renewal of an existing levy", "vote": "Awaiting verified count",
+      "source": "Check the Marion County Board of Elections for the official result."
+    }
+  },
+  { "name": "Fairbanks Local", "counties": ["Union"] },
+  { "name": "Fairfield Union Local", "counties": ["Fairfield"] },
+  { "name": "Gahanna-Jefferson City", "counties": ["Franklin"] },
+  { "name": "Grandview Heights City", "counties": ["Franklin"] },
+  { "name": "Groveport Madison Local", "counties": ["Franklin"] },
+  { "name": "Hamilton Local", "counties": ["Franklin"] },
+  { "name": "Highland Local", "counties": ["Morrow"] },
+  { "name": "Hilliard City", "counties": ["Franklin"] },
+  { "name": "Lancaster City", "counties": ["Fairfield"] },
+  { "name": "Liberty Union-Thurston Local", "counties": ["Fairfield"] },
+  { "name": "Marion City", "counties": ["Marion"] },
+  { "name": "Marysville Exempted Village", "counties": ["Union"] },
+  { "name": "Mount Gilead Exempted Village", "counties": ["Morrow"] },
+  { "name": "New Albany-Plain Local", "counties": ["Franklin"] },
+  { "name": "North Union Local", "counties": ["Union"] },
+  { "name": "Northmor Local", "counties": ["Morrow"] },
+  { "name": "Olentangy Local", "counties": ["Delaware"] },
+  {
+    "name": "Pickerington Local", "counties": ["Fairfield", "Franklin"],
+    "levy": {
+      "date": "November 3, 2026", "status": "Unofficial", "result": "Did not pass",
+      "issue": "0.75% additional school income tax, 10 years",
+      "amount": "About $21.9 million per year", "vote": "Decided by fewer than 300 votes",
+      "source": "Unofficial results reported Nov. 4, 2026 (WSYX, NBC4). Official totals combine Fairfield and Franklin counties once certified."
+    }
+  },
+  { "name": "Pleasant Local", "counties": ["Marion"] },
+  { "name": "Reynoldsburg City", "counties": ["Franklin"] },
+  { "name": "Ridgedale Local", "counties": ["Marion"] },
+  { "name": "River Valley Local", "counties": ["Marion"] },
+  {
+    "name": "South-Western City", "counties": ["Franklin"],
+    "levy": {
+      "date": "November 3, 2026", "status": "Unofficial", "result": "Passed",
+      "issue": "Issue 6 · bond issue, about 2.26 mills, up to 38 years",
+      "amount": "$220 million", "vote": "About 66% for",
+      "source": "Unofficial results reported Nov. 4, 2026 (AP via NBC4). Official totals are certified by the county board of elections."
+    }
+  },
+  {
+    "name": "Upper Arlington City", "counties": ["Franklin"],
+    "levy": {
+      "date": "November 3, 2026", "status": "Unofficial", "result": "Did not pass",
+      "issue": "Issue 7 · operating levy plus bond, 4.9 mills combined",
+      "amount": "$273.5 million bond", "vote": "About 49% for",
+      "source": "Unofficial results reported Nov. 4, 2026 (AP via NBC4). Official totals are certified by the county board of elections."
+    }
+  },
+  { "name": "Walnut Township Local", "counties": ["Fairfield"] },
+  { "name": "Westerville City", "counties": ["Franklin", "Delaware"] },
+  { "name": "Whitehall City", "counties": ["Franklin"] },
+  { "name": "Worthington City", "counties": ["Franklin"] }
+]

@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Central Ohio School District Research Guide</title>
+<style>
+@font-face { font-family: 'Cormorant Garamond'; font-weight: 500; src: url(fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-weight: 500; font-style: italic; src: url(fonts/cormorant-garamond-latin-500-italic.woff2) format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-weight: 600; src: url(fonts/cormorant-garamond-latin-600-normal.woff2) format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-weight: 700; src: url(fonts/cormorant-garamond-latin-700-normal.woff2) format('woff2'); }
+@font-face { font-family: Jost; font-weight: 400; src: url(fonts/jost-latin-400-normal.woff2) format('woff2'); }
+@font-face { font-family: Jost; font-weight: 500; src: url(fonts/jost-latin-500-normal.woff2) format('woff2'); }
+@font-face { font-family: Jost; font-weight: 600; src: url(fonts/jost-latin-600-normal.woff2) format('woff2'); }
+
+:root {
+  --paper: #FCFAF6; --ivory: #FBF8F2; --sand: #F3EEE5; --rule: #E2DACC; --line: #B8AC98;
+  --ink: #1C1B1A; --body: #45423F; --muted: #67625C; --gold: #8A6A35; --gold-line: #C9B48C;
+  --serif: 'Cormorant Garamond', Georgia, serif; --sans: Jost, 'Helvetica Neue', Arial, sans-serif;
+}
+@page { size: 8.5in 11in; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: var(--sans); color: var(--ink); font-size: 10.5pt; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 8.5in; height: 11in; position: relative; overflow: hidden; background: var(--paper); padding: 0.75in 0.8in 0.9in; page-break-after: always; break-after: page; display: flex; flex-direction: column; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+.folio { position: absolute; left: 0.8in; right: 0.8in; bottom: 0.45in; display: flex; justify-content: space-between; font-size: 7.5pt; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 8px; }
+.eyebrow { font-size: 8pt; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+.step { font-family: var(--serif); font-size: 64pt; font-weight: 700; line-height: .8; color: var(--gold-line); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; margin: 0; color: var(--ink); }
+h2 { font-size: 30pt; line-height: 1.04; margin-top: 8px; }
+h3 { font-size: 15pt; line-height: 1.2; margin-top: 18px; }
+p { margin: 8px 0 0; color: var(--body); }
+.lead { font-size: 12pt; line-height: 1.55; color: var(--body); max-width: 5.8in; margin-top: 12px; }
+.head { display: flex; gap: 22px; align-items: flex-end; padding-bottom: 16px; border-bottom: 1.5px solid var(--ink); }
+ul, ol { margin: 8px 0 0; padding-left: 18px; color: var(--body); }
+li { margin-top: 5px; }
+li strong, p strong { color: var(--ink); font-weight: 600; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.box { background: var(--sand); padding: 14px 16px; margin-top: 16px; }
+.box--line { background: transparent; border: 1px solid var(--rule); border-top: 2px solid var(--gold); }
+.box p:first-child { margin-top: 0; }
+.box-title { font-family: var(--serif); font-size: 13.5pt; font-weight: 600; color: var(--ink); }
+table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 9.5pt; }
+th { text-align: left; font-size: 7.5pt; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding: 0 8px 7px 0; border-bottom: 1.5px solid var(--ink); }
+td { padding: 8px 8px 8px 0; border-bottom: 1px solid var(--rule); vertical-align: top; color: var(--body); }
+td strong { color: var(--ink); font-weight: 600; }
+.url { font-size: 8.8pt; color: var(--gold); word-break: break-all; text-decoration: none; }
+.small { font-size: 8.5pt; color: var(--muted); line-height: 1.5; }
+.num { font-variant-numeric: tabular-nums; text-align: right; }
+.spacer { flex: 1 1 auto; }
+
+/* cover */
+.cover { padding: 0.9in 0.9in 0.7in; background: var(--paper); }
+.cover-top { display: flex; justify-content: space-between; font-size: 8pt; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+.cover-rule { width: 64px; height: 3px; background: var(--gold); margin-top: 1.25in; }
+.cover h1 { font-size: 50pt; line-height: .98; margin-top: 22px; letter-spacing: -.01em; }
+.cover .sub { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 18pt; line-height: 1.3; color: var(--body); margin-top: 22px; max-width: 5.4in; }
+.counties { margin-top: 26px; font-size: 8.5pt; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+.presenter { display: flex; gap: 22px; align-items: center; padding-top: 22px; border-top: 1px solid var(--rule); }
+.presenter img.photo { width: 84px; height: 105px; object-fit: cover; object-position: 50% 12%; border: 1px solid var(--gold-line); }
+.presenter-name { font-family: var(--serif); font-size: 15pt; font-weight: 600; }
+.brands { display: flex; align-items: center; gap: 30px; margin-top: 10px; }
+.brands { gap: 30px; }
+.brands .agency, .brands .cb { height: 60px; }
+.disclaimer { margin-top: 18px; font-size: 7.5pt; line-height: 1.5; color: var(--muted); }
+
+/* contents */
+.toc { margin-top: 18px; }
+.toc-row { display: grid; grid-template-columns: 56px 1fr 40px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid var(--rule); }
+.toc-row .n { font-family: var(--serif); font-size: 20pt; font-weight: 700; color: var(--gold-line); line-height: 1; }
+.toc-row .t { font-family: var(--serif); font-size: 15pt; font-weight: 600; }
+.toc-row .t span { display: block; font-family: var(--sans); font-size: 9pt; font-weight: 400; color: var(--muted); }
+.toc-row .pg { text-align: right; font-size: 9.5pt; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tracks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+.track { border-top: 2px solid var(--ink); padding-top: 10px; font-size: 9.5pt; }
+.track b { display: block; font-family: var(--serif); font-size: 13pt; font-weight: 600; }
+
+/* worksheet */
+.ws-row { display: grid; grid-template-columns: 2.1in 1fr; gap: 14px; align-items: end; padding: 9px 0 0; }
+.ws-row .label { font-size: 9pt; font-weight: 500; color: var(--ink); }
+.ws-row .label span { display: block; font-weight: 400; font-size: 7.8pt; color: var(--muted); }
+.ws-row .blank { border-bottom: 1px solid var(--line); height: 22px; }
+.ws-lines .blank { height: 22px; border-bottom: 1px solid var(--line); }
+.check { display: grid; grid-template-columns: 14px 1fr; gap: 10px; align-items: start; margin-top: 7px; font-size: 9.5pt; color: var(--body); }
+.check i { width: 12px; height: 12px; border: 1.3px solid var(--ink); display: block; margin-top: 3px; }
+
+/* back cover */
+.back { background: var(--ink); color: #EEEAE3; padding: 0.9in; }
+.back h2 { color: #FBF8F2; font-size: 34pt; }
+.back p { color: #E3DED5; }
+.back .contact { margin-top: 26px; display: flex; gap: 26px; align-items: center; }
+.back .contact img { width: 120px; height: 150px; object-fit: cover; object-position: 50% 12%; border: 1px solid var(--gold-line); }
+.back .contact .name { font-family: var(--serif); font-size: 17pt; font-weight: 600; color: #FBF8F2; }
+.back .contact .line { font-size: 11pt; color: #EEEAE3; margin-top: 4px; }
+.back .brands-panel { margin-top: 34px; padding-top: 26px; border-top: 1px solid #4A4744; display: flex; gap: 40px; align-items: center; }
+.back .brands-panel { gap: 48px; }
+.back .brands-panel .agency, .back .brands-panel .cb { height: 68px; }
+.back .fine { margin-top: auto; font-size: 7.6pt; line-height: 1.55; color: #C9C2B6; }
+</style>
+</head>
+<body>
+
+<!-- 1 · COVER -->
+<section class="page cover">
+  <div class="cover-top"><span>Research guide</span><span>2026 Edition</span></div>
+  <div class="cover-rule"></div>
+  <h1>The Central Ohio School District Research Guide</h1>
+  <p class="sub">Everything you need to research your school district before making your next housing decision.</p>
+  <div class="counties">Delaware · Fairfield · Franklin · Marion · Morrow · Union</div>
+  <div class="spacer"></div>
+  <div class="presenter">
+    <img class="photo" src="../assets/sarita-headshot.jpg" alt="">
+    <div>
+      <div class="eyebrow">Presented by</div>
+      <div class="presenter-name">Sarita Lawrence, REALTOR®</div>
+      <div class="brands"><img class="agency" src="../assets/brand-agency.png" alt="The Agency Real Estate Group"><img class="cb" src="../assets/brand-cb.png" alt="Coldwell Banker Realty"></div>
+    </div>
+  </div>
+  <p class="disclaimer">An independent educational resource from Central Ohio School District Insights. Not affiliated with or endorsed by the State of Ohio, the Ohio Department of Education and Workforce, any school district, or any board of elections. This guide does not rate, rank or recommend school districts or neighborhoods.</p>
+</section>
+
+<!-- 2 · CONTENTS -->
+<section class="page">
+  <div class="eyebrow">Inside this guide</div>
+  <h2>Five steps, all from official sources</h2>
+  <p class="lead">Each step points you to the public record that answers one question. You don't need an account or a fee for any of them.</p>
+  <div class="toc">
+    <div class="toc-row"><div class="n">1</div><div class="t">Confirm the district for an address<span>County auditor parcel records</span></div><div class="pg">3</div></div>
+    <div class="toc-row"><div class="n">2</div><div class="t">Read an Ohio School Report Card<span>Ohio Department of Education and Workforce</span></div><div class="pg">4</div></div>
+    <div class="toc-row"><div class="n">3</div><div class="t">Find levy and election results<span>County boards of elections</span></div><div class="pg">5</div></div>
+    <div class="toc-row"><div class="n">4</div><div class="t">Understand what you'll pay in taxes<span>County auditor and Ohio Department of Taxation</span></div><div class="pg">6</div></div>
+    <div class="toc-row"><div class="n">5</div><div class="t">Look at the district's finances<span>Five-year financial forecasts</span></div><div class="pg">7</div></div>
+    <div class="toc-row"><div class="n">+</div><div class="t">Housing considerations, worksheet and resources<span>For buyers, sellers and homeowners staying put</span></div><div class="pg">8–10</div></div>
+  </div>
+  <h3>Start where you are</h3>
+  <div class="tracks">
+    <div class="track"><b>Buying</b>Do steps 1 through 4 for every address you're seriously considering, then fill in a worksheet (page 9) for each.</div>
+    <div class="track"><b>Selling</b>Use steps 1, 3 and 4 to gather the facts buyers ask about. Page 8 lists what to have ready.</div>
+    <div class="track"><b>Staying</b>Steps 3 through 5 show what may change your tax bill and how to check your credits and valuation.</div>
+  </div>
+  <div class="box box--line" style="margin-top:22px">
+    <p class="small" style="color:var(--body)"><strong>About the information in this guide.</strong> Rules, rates and results change. Every figure in this guide is an example or a description of how a process works, current as of November 2026. Always confirm specifics with the official source named in each step.</p>
+  </div>
+  <div class="folio"><span>Central Ohio School District Research Guide</span><span>2</span></div>
+</section>
+
+<!-- 3 · STEP 1 -->
+<section class="page">
+  <div class="head"><div class="step">1</div><div><div class="eyebrow">Step one</div><h2>Confirm the district for an address</h2></div></div>
+  <p class="lead">A home's school district is set by its parcel, not its mailing city or ZIP code. Two houses with the same city in their address can sit in different districts and pay different taxes.</p>
+  <div class="cols" style="margin-top:6px">
+    <div>
+      <h3>How to look it up</h3>
+      <ol>
+        <li>Open the county auditor's property search for the county where the home sits (table below).</li>
+        <li>Search by street address or parcel number.</li>
+        <li>On the parcel record, find the <strong>school district</strong> or <strong>taxing district</strong> field.</li>
+        <li>Write down the district name and the tax district number. You'll use both in steps 3 and 4.</li>
+      </ol>
+    </div>
+    <div>
+      <h3>Watch for county lines</h3>
+      <p>Some districts serve more than one county. Dublin City Schools, for example, serves parts of Franklin, Delaware and Union counties, and Pickerington Local Schools serves parts of Fairfield and Franklin.</p>
+      <p>For those districts, the parcel's own county auditor is the source for that home's taxes, and every county's board of elections reports part of each levy vote.</p>
+    </div>
+  </div>
+  <h3>County auditor property search</h3>
+  <table>
+    <tr><th style="width:1.2in">County</th><th>Where to search</th></tr>
+    <tr><td><strong>Delaware</strong></td><td>Find the Delaware County Auditor through the County Auditors' Association of Ohio directory <a class="url" href="https://caao.org/auditors-directory">caao.org/auditors-directory</a></td></tr>
+    <tr><td><strong>Fairfield</strong></td><td>Fairfield County Auditor <a class="url" href="https://www.fairfieldcountyohio.gov/auditor">fairfieldcountyohio.gov/auditor</a></td></tr>
+    <tr><td><strong>Franklin</strong></td><td>Franklin County Auditor <a class="url" href="https://www.franklincountyauditor.com">franklincountyauditor.com</a></td></tr>
+    <tr><td><strong>Marion</strong></td><td>Marion County Auditor property search <a class="url" href="https://propertysearch.marioncountyohio.gov">propertysearch.marioncountyohio.gov</a></td></tr>
+    <tr><td><strong>Morrow</strong></td><td>Find the Morrow County Auditor through the County Auditors' Association of Ohio directory <a class="url" href="https://caao.org/auditors-directory">caao.org/auditors-directory</a></td></tr>
+    <tr><td><strong>Union</strong></td><td>Union County Auditor <a class="url" href="https://www.unioncountyohio.gov/departments/auditor">unioncountyohio.gov/departments/auditor</a></td></tr>
+  </table>
+  <div class="box"><p><strong>Tip:</strong> If a listing names a school district, still confirm it on the auditor's parcel record. Listings can carry over errors from earlier sales.</p></div>
+  <div class="folio"><span>Step 1 · Confirm the district</span><span>3</span></div>
+</section>
+
+<!-- 4 · STEP 2 -->
+<section class="page">
+  <div class="head"><div class="step">2</div><div><div class="eyebrow">Step two</div><h2>Read an Ohio School Report Card</h2></div></div>
+  <p class="lead">Each year the Ohio Department of Education and Workforce publishes a report card for every public school district and school building in the state.</p>
+  <div class="cols">
+    <div>
+      <h3>What it measures</h3>
+      <p>Report cards use star ratings across several components, along with an overall rating. Components include:</p>
+      <ul>
+        <li><strong>Achievement</strong>: how students performed on state tests</li>
+        <li><strong>Progress</strong>: how much students grew from one year to the next</li>
+        <li><strong>Gap Closing</strong>: how well groups of students are meeting expectations</li>
+        <li><strong>Early Literacy</strong>: reading progress in the early grades</li>
+        <li><strong>Graduation</strong>: four- and five-year graduation rates</li>
+      </ul>
+      <p>The site also reports measures such as college, career, workforce and military readiness.</p>
+    </div>
+    <div>
+      <h3>How to read it well</h3>
+      <ol>
+        <li><strong>Look past the overall rating.</strong> Open each component to see what drives it.</li>
+        <li><strong>Check more than one year.</strong> A single year can move for many reasons.</li>
+        <li><strong>Look at buildings as well as the district.</strong> The specific schools that serve an address have their own report cards.</li>
+        <li><strong>Read the notes.</strong> The site explains how each measure is calculated.</li>
+      </ol>
+      <div class="box box--line">
+        <div class="box-title">Where to find it</div>
+        <p>Ohio School Report Cards<br><a class="url" href="https://reportcard.education.ohio.gov">reportcard.education.ohio.gov</a></p>
+        <p class="small">Search by district or school name. The district name comes from step 1.</p>
+      </div>
+    </div>
+  </div>
+  <div class="box"><p><strong>A note on schools and housing decisions.</strong> Report cards are one source of information among many. To learn about programs, transportation, enrollment or anything else specific, contact the district directly. This guide doesn't rate or rank districts, and it isn't a substitute for your own research.</p></div>
+  <div class="folio"><span>Step 2 · Report cards</span><span>4</span></div>
+</section>
+
+<!-- 5 · STEP 3 -->
+<section class="page">
+  <div class="head"><div class="step">3</div><div><div class="eyebrow">Step three</div><h2>Find levy and election results</h2></div></div>
+  <p class="lead">School levies and bond issues go to voters, and the results can change what homeowners pay. County boards of elections are the official source.</p>
+  <div class="cols">
+    <div>
+      <h3>Where results come from</h3>
+      <ul>
+        <li><strong>Election night results are unofficial.</strong> Counties certify official results after counting provisional and late absentee ballots.</li>
+        <li><strong>Multi-county districts</strong> appear on more than one county's results. Add every county's votes together for the districtwide outcome.</li>
+        <li><strong>Ballot language</strong> is published before each election. It states the rate, the term and what the money is for.</li>
+      </ul>
+      <div class="box box--line">
+        <div class="box-title">Where to find it</div>
+        <p>Ohio Secretary of State directory of county boards of elections<br><a class="url" href="https://www.ohiosos.gov/elections/elections-officials/county-boards-of-elections-directory/">ohiosos.gov › county boards of elections directory</a></p>
+        <p class="small">County links are listed on page 10.</p>
+      </div>
+    </div>
+    <div>
+      <h3>Levy types, in plain language</h3>
+      <table>
+        <tr><td><strong>Additional</strong></td><td>New money. Raises taxes if approved.</td></tr>
+        <tr><td><strong>Renewal</strong></td><td>Continues an expiring levy, generally at the rate already being paid.</td></tr>
+        <tr><td><strong>Replacement</strong></td><td>Continues a levy but recalculates it at current values, which can increase it.</td></tr>
+        <tr><td><strong>Fixed-sum</strong></td><td>Emergency or substitute levies that raise a set dollar amount.</td></tr>
+        <tr><td><strong>Bond issue</strong></td><td>Repays borrowing for buildings. The rate can change over the life of the bond.</td></tr>
+        <tr><td><strong>Permanent improvement</strong></td><td>Pays for buildings, equipment and other long-lasting items.</td></tr>
+        <tr><td><strong>School income tax</strong></td><td>Paid on residents' income rather than property value.</td></tr>
+      </table>
+      <p class="small" style="margin-top:8px">Ohio changed several levy rules in 2025–26. Your county auditor can tell you how a specific issue works.</p>
+    </div>
+  </div>
+  <div class="box" style="margin-top:22px">
+    <div class="box-title">Reading a ballot issue</div>
+    <div class="cols" style="gap:20px; margin-top:4px">
+      <div>
+        <div class="check"><i></i><span><strong>Type:</strong> new, renewal, replacement, bond or income tax?</span></div>
+        <div class="check"><i></i><span><strong>Rate:</strong> mills for property tax, or a percentage for income tax</span></div>
+        <div class="check"><i></i><span><strong>Term:</strong> a set number of years, or continuing</span></div>
+      </div>
+      <div>
+        <div class="check"><i></i><span><strong>Purpose:</strong> operating costs, buildings, or permanent improvements</span></div>
+        <div class="check"><i></i><span><strong>Estimated cost:</strong> the county auditor's estimate, often stated per $100,000 of home value</span></div>
+        <div class="check"><i></i><span><strong>Start date:</strong> the first tax year it would be collected</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Step 3 · Levy and election results</span><span>5</span></div>
+</section>
+
+<!-- 6 · STEP 4 -->
+<section class="page">
+  <div class="head"><div class="step">4</div><div><div class="eyebrow">Step four</div><h2>Understand what you'll pay in taxes</h2></div></div>
+  <p class="lead">School funding reaches households two ways: property taxes on the home, and in some districts, an income tax on residents.</p>
+  <div class="cols">
+    <div>
+      <h3>How property tax is calculated</h3>
+      <ol>
+        <li><strong>Market value</strong> is set by the county auditor.</li>
+        <li><strong>Assessed value</strong> is 35% of market value.</li>
+        <li><strong>Millage</strong> is applied to assessed value. One mill is $1 per $1,000 of assessed value.</li>
+      </ol>
+      <p>A new 1-mill levy costs about <strong>$35 a year per $100,000</strong> of market value, before credits.</p>
+      <table>
+        <tr><th colspan="2">Illustrative example only</th></tr>
+        <tr><td>Auditor market value</td><td class="num">$300,000</td></tr>
+        <tr><td>Assessed value (35%)</td><td class="num">$105,000</td></tr>
+        <tr><td>New 1-mill levy</td><td class="num">$105 / yr</td></tr>
+        <tr><td>New 3-mill levy</td><td class="num">$315 / yr</td></tr>
+        <tr><td><strong>New 5-mill levy</strong></td><td class="num"><strong>$525 / yr</strong></td></tr>
+      </table>
+      <p class="small" style="margin-top:8px">Ohio's tax reduction factors generally keep voted levies from collecting more as values rise, so actual bills don't simply track this math.</p>
+    </div>
+    <div>
+      <h3>School district income tax</h3>
+      <p>Many Ohio districts also tax residents' income. A <strong>traditional</strong> school income tax applies to a broad base of income on the Ohio return. An <strong>earned income</strong> tax applies only to wages and self-employment income.</p>
+      <div class="box box--line"><div class="box-title">Check any address</div><p>The Finder, from the Ohio Department of Taxation<br><a class="url" href="https://thefinder.tax.ohio.gov">thefinder.tax.ohio.gov</a></p></div>
+      <h3>Credits and valuation</h3>
+      <ul>
+        <li><strong>Owner-occupancy credit:</strong> available on a homeowner's primary residence. Confirm with the auditor that it's on your bill.</li>
+        <li><strong>Homestead exemption:</strong> available to qualifying seniors and homeowners with disabilities, subject to rules set by the state.</li>
+        <li><strong>Board of Revision:</strong> if you disagree with your home's appraised value, the county Board of Revision hears complaints. Ask the auditor about the yearly filing deadline.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="box box--line" style="margin-top:20px">
+    <div class="box-title">Recent changes to Ohio property tax law</div>
+    <p>Ohio enacted several property tax changes in 2025 and 2026 (including House Bills 124, 129, 186, 309 and 335), affecting owner-occupied credits and limits on some increases. Because the details depend on your county and your district's levies, ask your county auditor how they apply to your bill.</p>
+  </div>
+  <div class="folio"><span>Step 4 · Taxes</span><span>6</span></div>
+</section>
+
+<!-- 7 · STEP 5 -->
+<section class="page">
+  <div class="head"><div class="step">5</div><div><div class="eyebrow">Step five</div><h2>Look at the district's finances</h2></div></div>
+  <p class="lead">Ohio school districts file a five-year financial forecast each fall and update it in the spring. It shows where a district expects its money to come from and go over the next five years.</p>
+  <div class="cols">
+    <div>
+      <h3>What to look for</h3>
+      <ul>
+        <li><strong>Revenue compared with spending.</strong> Is the district projecting to spend more than it brings in, and starting when?</li>
+        <li><strong>Ending cash balance.</strong> How much is projected to remain at the end of each year?</li>
+        <li><strong>Levy assumptions.</strong> Does the forecast assume a renewal or a new levy passes?</li>
+        <li><strong>The written notes.</strong> The treasurer explains enrollment, staffing and state funding assumptions.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Where to find it</h3>
+      <ul>
+        <li>The district treasurer's page on the district's own website</li>
+        <li>The Ohio Department of Education and Workforce <a class="url" href="https://education.ohio.gov">education.ohio.gov</a></li>
+        <li>Board of education meeting agendas and minutes, where forecasts are presented and approved</li>
+      </ul>
+      <div class="box">
+        <div class="box-title">Why it matters for a home</div>
+        <p>A forecast can signal whether a district may ask voters for a levy in the next few years. That can affect future tax bills for every homeowner in the district.</p>
+      </div>
+    </div>
+  </div>
+  <h3>Questions worth asking the district</h3>
+  <ul>
+    <li>When does the district expect to place its next issue on the ballot, if at all?</li>
+    <li>Which existing levies expire in the next few years?</li>
+    <li>Where can residents find board meeting schedules and public comment opportunities?</li>
+  </ul>
+  <div class="folio"><span>Step 5 · District finances</span><span>7</span></div>
+</section>
+
+<!-- 8 · HOUSING CONSIDERATIONS -->
+<section class="page">
+  <div class="eyebrow">Housing considerations</div>
+  <h2>Buying, selling, or staying</h2>
+  <p class="lead">The same records answer different questions depending on where you are.</p>
+  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 6px">
+    <div class="track"><b>If you're buying</b>
+      <div class="check"><i></i><span>Confirm the school district on the auditor's parcel record for each address.</span></div>
+      <div class="check"><i></i><span>Ask the lender to include property taxes and any school income tax in your monthly estimate.</span></div>
+      <div class="check"><i></i><span>Remember the seller's tax bill reflects their credits. Yours may differ.</span></div>
+      <div class="check"><i></i><span>Check recent levy results and the district's five-year forecast.</span></div>
+      <div class="check"><i></i><span>Contact the district directly with questions about programs or enrollment.</span></div>
+    </div>
+    <div class="track"><b>If you're selling</b>
+      <div class="check"><i></i><span>Have the school district, yearly taxes and any school income tax rate ready to share.</span></div>
+      <div class="check"><i></i><span>List improvements you've made, with approximate dates.</span></div>
+      <div class="check"><i></i><span>Know what similar homes nearby have recently sold for.</span></div>
+      <div class="check"><i></i><span>Note any recent or upcoming levies so you can answer buyer questions accurately.</span></div>
+      <div class="check"><i></i><span>Prepare a one-page fact sheet drawn from public records.</span></div>
+    </div>
+    <div class="track"><b>If you're staying</b>
+      <div class="check"><i></i><span>Review your tax bill and confirm the credits you qualify for are applied.</span></div>
+      <div class="check"><i></i><span>Follow upcoming levies and renewals in your district.</span></div>
+      <div class="check"><i></i><span>Watch for reappraisal notices from the county auditor.</span></div>
+      <div class="check"><i></i><span>If you disagree with a valuation, ask about the Board of Revision deadline.</span></div>
+      <div class="check"><i></i><span>Keep records of improvements for when you eventually sell.</span></div>
+    </div>
+  </div>
+  <div class="box box--line" style="margin-top:26px">
+    <div class="box-title">Do levy results change home values?</div>
+    <p>Not automatically. Home prices reflect interest rates, inventory, condition, location and many other factors. A single election result is one input among many, and its effect, if any, varies by market and over time. For a specific home, a current comparative market analysis is the reliable tool.</p>
+  </div>
+  <div class="box" style="margin-top:14px">
+    <p><strong>Fair housing.</strong> This guide shares public information so every reader can make their own decisions. It does not describe any district or neighborhood as better or worse, and every reader receives the same information.</p>
+  </div>
+  <div class="folio"><span>Housing considerations</span><span>8</span></div>
+</section>
+
+<!-- 9 · WORKSHEET -->
+<section class="page">
+  <div class="eyebrow">Worksheet</div>
+  <h2>District research worksheet</h2>
+  <p class="lead" style="margin-bottom:6px">Fill in one for each address you're considering. Print as many copies as you need.</p>
+  <div class="ws-row"><div class="label">Property address</div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label">County</div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label">School district<span>From the auditor's parcel record (step 1)</span></div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label">Tax district number</div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label">Current yearly property taxes<span>From the auditor (step 4)</span></div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label">School income tax<span>Type and rate from The Finder</span></div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label">Credits on the current bill</div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label">Report card notes<span>Overall and components (step 2)</span></div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label"></div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label">Recent levies and results<span>From the board of elections (step 3)</span></div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label"></div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label">Upcoming or expiring levies</div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label">Five-year forecast notes<span>Step 5</span></div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label"></div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label">Questions to ask</div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label"></div><div class="blank"></div></div>
+  <div class="ws-row"><div class="label"></div><div class="blank"></div></div>
+  <div class="folio"><span>Worksheet</span><span>9</span></div>
+</section>
+
+<!-- 10 · RESOURCES -->
+<section class="page">
+  <div class="eyebrow">Directory</div>
+  <h2>Official resources</h2>
+  <p class="lead">All of these are free public resources. Links were checked in November 2026. Where a county's own site wasn't confirmed, the statewide directory is listed instead.</p>
+  <h3>Statewide</h3>
+  <table>
+    <tr><td style="width:2.6in"><strong>Ohio School Report Cards</strong></td><td><a class="url" href="https://reportcard.education.ohio.gov">reportcard.education.ohio.gov</a></td></tr>
+    <tr><td><strong>Ohio Department of Education and Workforce</strong></td><td><a class="url" href="https://education.ohio.gov">education.ohio.gov</a></td></tr>
+    <tr><td><strong>Ohio Department of Taxation</strong></td><td><a class="url" href="https://tax.ohio.gov">tax.ohio.gov</a></td></tr>
+    <tr><td><strong>The Finder (school income tax lookup)</strong></td><td><a class="url" href="https://thefinder.tax.ohio.gov">thefinder.tax.ohio.gov</a></td></tr>
+    <tr><td><strong>County boards of elections directory</strong></td><td><a class="url" href="https://www.ohiosos.gov/elections/elections-officials/county-boards-of-elections-directory/">ohiosos.gov › elections › county boards of elections directory</a></td></tr>
+    <tr><td><strong>County auditors directory</strong></td><td><a class="url" href="https://caao.org/auditors-directory">caao.org/auditors-directory</a></td></tr>
+  </table>
+  <h3>By county</h3>
+  <table>
+    <tr><th style="width:1.1in">County</th><th>Board of elections</th><th>Auditor</th></tr>
+    <tr><td><strong>Delaware</strong></td><td><a class="url" href="https://vote.delawarecountyohio.gov">vote.delawarecountyohio.gov</a></td><td>Use the auditors directory</td></tr>
+    <tr><td><strong>Fairfield</strong></td><td><a class="url" href="https://www.boe.ohio.gov/fairfield">boe.ohio.gov/fairfield</a></td><td><a class="url" href="https://www.fairfieldcountyohio.gov/auditor">fairfieldcountyohio.gov/auditor</a></td></tr>
+    <tr><td><strong>Franklin</strong></td><td><a class="url" href="https://vote.franklincountyohio.gov">vote.franklincountyohio.gov</a></td><td><a class="url" href="https://www.franklincountyauditor.com">franklincountyauditor.com</a></td></tr>
+    <tr><td><strong>Marion</strong></td><td>Use the boards of elections directory</td><td><a class="url" href="https://propertysearch.marioncountyohio.gov">propertysearch.marioncountyohio.gov</a></td></tr>
+    <tr><td><strong>Morrow</strong></td><td>Use the boards of elections directory</td><td>Use the auditors directory</td></tr>
+    <tr><td><strong>Union</strong></td><td><a class="url" href="https://www.unioncountyohio.gov/board-of-elections">unioncountyohio.gov/board-of-elections</a></td><td><a class="url" href="https://www.unioncountyohio.gov/departments/auditor">unioncountyohio.gov/departments/auditor</a></td></tr>
+  </table>
+  <div class="box" style="margin-top:20px"><p><strong>Explore online.</strong> Central Ohio School District Insights links to each of these resources for every district in the six counties, organized by an interactive county map.</p></div>
+  <div class="folio"><span>Official resources</span><span>10</span></div>
+</section>
+
+<!-- 11 · BACK COVER -->
+<section class="page back">
+  <div class="eyebrow" style="color:#C9B48C">Your next step</div>
+  <h2 style="margin-top:12px">Questions about a specific home?</h2>
+  <p class="lead" style="color:#E3DED5">Whether you're planning a move or staying put, I'm glad to walk through the school district, tax and levy records for any address, along with what's happening in the local market. No pressure and no obligation.</p>
+  <div class="contact">
+    <img src="../assets/sarita-headshot.jpg" alt="">
+    <div>
+      <div class="name">Sarita Lawrence, REALTOR®</div>
+      <div class="line">740-262-7288</div>
+      <div class="line">sarita.lawrence@cbrealty.com</div>
+      <div class="line" style="color:#C9C2B6">Serving Marion and Central Ohio</div>
+    </div>
+  </div>
+  <div class="brands-panel"><img class="agency" src="../assets/brand-agency-light.png" alt="The Agency Real Estate Group"><img class="cb" src="../assets/brand-cb-light.png" alt="Coldwell Banker Realty"></div>
+  <p class="fine">This guide is for general education and is not legal, tax or financial advice. Information is believed accurate as of November 2026 and may change; confirm details with the official sources listed. Central Ohio School District Insights is an independent resource and is not affiliated with or endorsed by the State of Ohio, the Ohio Department of Education and Workforce, any school district, or any board of elections. Equal Housing Opportunity.</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "siteName": "Central Ohio School District Insights",
+  "siteUrl": "https://schools.saritalawrence.com",
+  "published": "November 2026",
+  "agent": {
+    "name": "Sarita Lawrence, REALTOR®",
+    "brokerage": "Coldwell Banker Realty",
+    "team": "The Agency Real Estate Group",
+    "phone": "740-262-7288",
+    "phoneHref": "tel:7402627288",
+    "email": "sarita.lawrence@cbrealty.com",
+    "bio": "Sarita has spent sixteen years in housing, including nonprofit housing and community services, and today helps families across Marion and Central Ohio buy and sell homes. She built this resource so neighbors can find clear, official answers about their school districts, whether they're moving or staying put."
+  },
+  "analytics": {
+    "clarityProjectId": ""
+  },
+  "officialLinks": {
+    "reportCards": "https://reportcard.education.ohio.gov/",
+    "boeDirectory": "https://www.ohiosos.gov/elections/elections-officials/county-boards-of-elections-directory/",
+    "auditorDirectory": "https://caao.org/auditors-directory/",
+    "taxation": "https://tax.ohio.gov/",
+    "theFinder": "https://thefinder.tax.ohio.gov/",
+    "dew": "https://education.ohio.gov/"
+  }
+}
