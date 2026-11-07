@@ -26,7 +26,7 @@
       "source": "Check the Marion County Board of Elections for the official result."
     }
   },
-  { "name": "Fairbanks Local", "counties": ["Union"] },
+  { "name": "Fairbanks Local", "counties": ["Union", "Madison"] },
   { "name": "Fairfield Union Local", "counties": ["Fairfield"] },
   { "name": "Gahanna-Jefferson City", "counties": ["Franklin"] },
   { "name": "Grandview Heights City", "counties": ["Franklin"] },
@@ -34,8 +34,12 @@
   { "name": "Hamilton Local", "counties": ["Franklin"] },
   { "name": "Highland Local", "counties": ["Morrow"] },
   { "name": "Hilliard City", "counties": ["Franklin"] },
+  { "name": "Jonathan Alder Local", "counties": ["Madison", "Union", "Franklin"] },
+  { "name": "Jefferson Local", "counties": ["Madison"] },
   { "name": "Lancaster City", "counties": ["Fairfield"] },
   { "name": "Liberty Union-Thurston Local", "counties": ["Fairfield"] },
+  { "name": "London City", "counties": ["Madison"] },
+  { "name": "Madison-Plains Local", "counties": ["Madison"] },
   { "name": "Marion City", "counties": ["Marion"] },
   { "name": "Marysville Exempted Village", "counties": ["Union"] },
   { "name": "Mount Gilead Exempted Village", "counties": ["Morrow"] },
