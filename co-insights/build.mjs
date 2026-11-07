@@ -181,8 +181,8 @@ function homePage() {
     const list = inCounty(c);
     return `<div class="county-panel" data-county-panel="${c.slug}" hidden>
       <h3 class="county-panel__title">${esc(c.name)} County</h3>
-      <p class="muted">${list.length} school districts serve part of the county</p>
-      <ul class="district-grid">${list.map((d) => `<li><a class="district-link" href="${href(p, `districts/${d.slug}/`)}" data-district="${esc(d.name)}" data-county="${esc(c.name)}"><span>${esc(d.name)}</span>${d.counties.length > 1 ? `<span class="district-link__note">Spans ${d.counties.length} counties</span>` : ''}</a></li>`).join('')}</ul>
+      <p class="muted">${list.length} school districts serve homes in ${esc(c.name)} County.${list.some((d) => d.counties.length > 1) ? ' Districts marked "Also in" cross into other counties too.' : ''}</p>
+      <ul class="district-grid">${list.map((d) => `<li><a class="district-link" href="${href(p, `districts/${d.slug}/`)}" data-district="${esc(d.name)}" data-county="${esc(c.name)}"><span>${esc(d.name)}</span>${d.counties.length > 1 ? `<span class="district-link__note">Also in ${d.counties.filter((n) => n !== c.name).join(' and ')} ${d.counties.length > 2 ? 'counties' : 'County'}</span>` : ''}</a></li>`).join('')}</ul>
     </div>`;
   }).join('');
   const main = `
@@ -202,7 +202,7 @@ function homePage() {
 
 <section id="explore" class="band band--sand"><div class="wrap">
   <div class="section-head">
-    <div><div class="eyebrow eyebrow--accent">Explore</div><h2 class="h2">Start with your county</h2></div>
+    <div><div class="eyebrow eyebrow--accent">Explore</div><h2 class="h2">Start with your county</h2><p class="lead lead--small">School district lines don't follow county lines. Some districts reach into two or three counties, so the same district can appear under more than one county. Pick the county where the home is, then choose its district.</p></div>
   </div>
   <div class="explore">
     <div class="explore__map">
@@ -301,7 +301,7 @@ function districtPage(d) {
   <div class="eyebrow">School district resources</div>
   <h1 class="display display--md">${esc(d.name)}</h1>
   <div class="chips">${d.counties.map((c) => `<span class="chip">${esc(c)} County</span>`).join('')}</div>
-  ${d.counties.length > 1 ? `<div class="callout"><strong>This district crosses county lines.</strong> Each county board of elections reports only the votes cast in its county. Add the results from every county listed above for the districtwide outcome.</div>` : ''}
+  ${d.counties.length > 1 ? `<div class="callout"><strong>This district serves more than one county.</strong> That's normal in Ohio, because school district lines don't follow county lines. Two things to know: the county auditor for the county the home is in has its tax records, and when the district puts a levy on the ballot, each county reports only its own votes. To see the full result, add up the numbers from each county listed above.</div>` : ''}
 </div></section>
 
 <section class="band band--rule"><div class="wrap cols3 cols3--district">
