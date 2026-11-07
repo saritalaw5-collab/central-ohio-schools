@@ -3,7 +3,10 @@
     "name": "Delaware",
     "slug": "delaware",
     "fips": "39041",
-    "label": [284, 259],
+    "label": [
+      284,
+      259
+    ],
     "boardOfElections": "https://vote.delawarecountyohio.gov/",
     "auditor": null
   },
@@ -11,7 +14,10 @@
     "name": "Fairfield",
     "slug": "fairfield",
     "fips": "39045",
-    "label": [413.6, 497],
+    "label": [
+      413.6,
+      497
+    ],
     "boardOfElections": "https://www.boe.ohio.gov/fairfield/",
     "auditor": "https://www.fairfieldcountyohio.gov/auditor/"
   },
@@ -19,15 +25,32 @@
     "name": "Franklin",
     "slug": "franklin",
     "fips": "39049",
-    "label": [282.7, 399],
+    "label": [
+      282.7,
+      399
+    ],
     "boardOfElections": "https://vote.franklincountyohio.gov/",
     "auditor": "https://www.franklincountyauditor.com/"
+  },
+  {
+    "name": "Madison",
+    "slug": "madison",
+    "fips": "39097",
+    "label": [
+      147.1,
+      432
+    ],
+    "boardOfElections": null,
+    "auditor": null
   },
   {
     "name": "Marion",
     "slug": "marion",
     "fips": "39101",
-    "label": [230.2, 118],
+    "label": [
+      230.2,
+      118
+    ],
     "boardOfElections": null,
     "auditor": "https://propertysearch.marioncountyohio.gov/"
   },
@@ -35,7 +58,10 @@
     "name": "Morrow",
     "slug": "morrow",
     "fips": "39117",
-    "label": [356.7, 147],
+    "label": [
+      356.7,
+      147
+    ],
     "boardOfElections": null,
     "auditor": null
   },
@@ -43,7 +69,10 @@
     "name": "Union",
     "slug": "union",
     "fips": "39159",
-    "label": [157.1, 249],
+    "label": [
+      157.1,
+      249
+    ],
     "boardOfElections": "https://www.unioncountyohio.gov/board-of-elections",
     "auditor": "https://www.unioncountyohio.gov/departments/auditor"
   }
