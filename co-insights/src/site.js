@@ -131,6 +131,7 @@
       var next = form.getAttribute('action');
       if (kind === 'guide') {
         if (!form.elements['first_name'].value.trim()) return fail('Please enter your first name.');
+        if (!form.elements['last_name'].value.trim()) return fail('Please enter your last name.');
         if (!emailOk(form.elements['email'].value)) return fail('Please enter a valid email address.');
         var sit = form.querySelector('input[name="situation"]:checked');
         if (!sit) return fail('Please choose the option that best describes you.');

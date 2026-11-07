@@ -365,6 +365,7 @@ function guidePage() {
     <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
     <h2 class="h3">Where should we send your guide?</h2>
     <div class="field"><label for="g-first">First name</label><input class="input" id="g-first" name="first_name" type="text" autocomplete="given-name" required></div>
+    <div class="field"><label for="g-last">Last name</label><input class="input" id="g-last" name="last_name" type="text" autocomplete="family-name" required></div>
     <div class="field"><label for="g-email">Email address</label><input class="input" id="g-email" name="email" type="email" autocomplete="email" required></div>
     <div class="field"><label for="g-district">School district</label>
       <select class="input" id="g-district" name="district">
@@ -379,10 +380,10 @@ function guidePage() {
       <label class="choice"><input type="radio" name="situation" value="staying"> I’m planning to stay where I am.</label>
       <label class="choice"><input type="radio" name="situation" value="researching"> I’m just researching.</label>
     </fieldset>
-    <label class="choice choice--consent"><input type="checkbox" name="marketing_consent" value="yes"> <span>Optional: I’d also like occasional emails about Central Ohio schools and housing from ${esc(site.agent.name)}. Unsubscribe anytime.</span></label>
+    <label class="choice choice--consent"><input type="checkbox" name="marketing_consent" value="yes" checked> <span>Yes, send me occasional emails about Central Ohio schools and housing from ${esc(site.agent.name)}. Uncheck this box if you’d rather not. Unsubscribe anytime.</span></label>
     <div class="form__error" role="alert" hidden></div>
     <button class="btn btn--block" type="submit">Get My Free District Research Guide</button>
-    <p class="muted small">We use your details only to send your guide and, if you ask, to follow up. We never sell your information. <a href="${href(p, 'privacy/')}">Privacy policy</a></p>
+    <p class="muted small">We use your details to send your guide and, if the box above is checked, occasional emails. We never sell your information. <a href="${href(p, 'privacy/')}">Privacy policy</a></p>
   </form>
 </div></section>`;
   return layout({ title: `Free School District Research Guide · ${site.siteName}`, description: 'Get the free Central Ohio School District Research Guide: report cards, levy results, property taxes and a district research checklist.', depth, main, page: 'guide' });
@@ -501,7 +502,7 @@ function privacyPage() {
   <p class="demo-note">Draft for review before launch. Have your broker or an attorney approve this policy.</p>
   <h1 class="display display--sm">Privacy policy</h1>
   <p><strong>What we collect.</strong> When you request the research guide, we collect your first name, email address, the school district you choose (optional) and which description fits you. When you request a property review, we collect your name, email address, property address, any improvements you list and your selling timeline.</p>
-  <p><strong>How we use it.</strong> To send what you requested and, if you ask for it, to follow up. If you check the optional box, you may also receive occasional emails about Central Ohio schools and housing. You can unsubscribe anytime.</p>
+  <p><strong>How we use it.</strong> To send what you requested and, if you ask for it, to follow up. On the research guide form, a box for occasional emails about Central Ohio schools and housing is checked for you. If you leave it checked, you may receive those emails. Uncheck it to receive only your guide. You can unsubscribe anytime.</p>
   <p><strong>What we don't do.</strong> We never sell your information. Site analytics record how pages are used, never names, emails or addresses.</p>
   <p><strong>Public resources.</strong> Links to government websites are free to use with no sign-up and open those sites in a new tab. Their own privacy policies apply there.</p>
   <p><strong>Contact.</strong> ${esc(a.name)}, ${esc(a.brokerage)}, <a href="mailto:${esc(a.email)}">${esc(a.email)}</a>, <a href="${a.phoneHref}">${esc(a.phone)}</a>.</p>
